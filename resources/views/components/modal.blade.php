@@ -27,12 +27,15 @@
     <div class="relative px-8 max-w-md mx-auto p-5 w-96 shadow-lg rounded-md bg-white">
         <div class="mt-3 text-center">
             <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-200">
-                <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"
+                    enable-background="new 0 0 40 40">
+                    <line x1="15" y1="15" x2="25" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                        stroke-miterlimit="10"></line>
+                    <line x1="25" y1="15" x2="15" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                        stroke-miterlimit="10"></line>
                 </svg>
             </div>
-            <h3 class="mt-2 text-lg leading-5 font-medium text-gray-900">Success!</h3>
+            <h3 class="mt-2 text-lg leading-5 font-medium text-gray-900">Failed!</h3>
             <div class="mt-2 px-7 py-3">
                 <p class="text-sm text-gray-500" id="modal-failed-message">Message</p>
             </div>
@@ -67,9 +70,31 @@
     }
 
     window.addEventListener('click', (e) => {
-        if (e.target == modal) {
+        if (e.target == modalSuccess) {
             closeModalSuccess()
         }
+
+        if (e.target == modalFailed) {
+            closeModalFailed()
+        }
     })
+
+    let modalFailed = document.getElementById('modal-failed')
+    let modalFailedMessage = document.getElementById('modal-failed-message')
+    let modalFailedOk = document.getElementById('modal-failed-ok')
+
+    modalFailedOk.addEventListener('click', () => {
+        closeModalFailed()
+    })
+
+    function openModalFailed(message) {
+        modalFailedMessage.innerText = message
+        modalFailed.classList.remove('invisible')
+    }
+
+    function closeModalFailed() {
+        modalFailed.classList.add('invisible')
+        modalFailedMessage.innerText = 'Message'
+    }
 </script>
 @endpush

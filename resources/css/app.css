@@ -12,4 +12,10 @@
     .button-primary {
         @apply px-4 py-2 bg-violet-500 rounded-full focus:shadow hover:bg-violet-600 text-sm leading-6 text-white;
     }
+    .card-primary {
+        @apply rounded p-5 shadow bg-white hover:bg-violet-500 hover:ring-violet-500;
+    }
+    .card-content-center {
+        @apply flex place-content-center place-items-center;
+    }
 }
