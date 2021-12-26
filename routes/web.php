@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'welcome']);
+Route::get('/info', [PageController::class, 'info']);
+Route::get('/mata-kuliah', [PageController::class, 'mataKuliah']);
+Route::get('/mahasiswa', [PageController::class, 'mahasiswa']);
 
 Route::get('/mahasiswa/{nim}', [MahasiswaController::class, 'detail']);

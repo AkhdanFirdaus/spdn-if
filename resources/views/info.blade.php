@@ -4,7 +4,7 @@
 @endpush
 
 @section('content')
-<h1>Mahasiswa</h1>
+<h1>Halaman Info</h1>
 @endsection
 
 @push('scripts')
