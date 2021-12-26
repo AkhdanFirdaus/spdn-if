@@ -10,4 +10,9 @@ class MataKuliah extends Model
     use HasFactory;
 
     protected $fillable = ["nama", "sks", "semester"];
+
+    public function nilais()
+    {
+        return $this->hasMany(Nilai::class);
+    }
 }

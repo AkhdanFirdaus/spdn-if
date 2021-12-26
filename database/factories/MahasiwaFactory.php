@@ -31,6 +31,7 @@ class MahasiwaFactory extends Factory
         return [
             "nim" => "1197050" . $cast,
             "nama" => $this->faker->name(),
+            "kelas" => $this->faker->randomElement(['A', 'B', 'C', 'D', 'E']),
             "email" => $this->faker->unique()->safeEmail(),
             "password" => bcrypt('password'),
             "no_telp" => $this->faker->phoneNumber(),

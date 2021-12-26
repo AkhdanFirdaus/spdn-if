@@ -16,6 +16,11 @@ class PageController extends Controller
         return view('info');
     }
 
+    public function kelas()
+    {
+        return view('kelas');
+    }
+
     public function mataKuliah()
     {
         return view('matakuliah');

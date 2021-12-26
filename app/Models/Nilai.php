@@ -12,9 +12,18 @@ class Nilai extends Model
     protected $fillable = [
         'mata_kuliah_id',
         'mahasiswa_id',
-        'kelas_id',
         "tugas",
         "uts",
         "uas",
     ];
+
+    public function mahasiswa()
+    {
+        return $this->belongsTo(Mahasiswa::class);
+    }
+
+    public function matakuliah()
+    {
+        return $this->belongsTo(MataKuliah::class, 'mata_kuliah_id');
+    }
 }

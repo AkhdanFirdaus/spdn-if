@@ -13,6 +13,7 @@ class Mahasiswa extends Model
     protected $fillable = [
         "nim",
         "nama",
+        "kelas",
         "email",
         "password",
         "no_telp",
@@ -23,5 +24,10 @@ class Mahasiswa extends Model
     protected static function  newFactory()
     {
         return new MahasiwaFactory();
+    }
+
+    public function nilais()
+    {
+        return $this->hasMany(Nilai::class);
     }
 }

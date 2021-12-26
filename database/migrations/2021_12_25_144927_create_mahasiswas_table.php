@@ -17,6 +17,7 @@ class CreateMahasiswasTable extends Migration
             $table->id();
             $table->string("nim");
             $table->string("nama");
+            $table->string("kelas");
             $table->string("email");
             $table->text("password");
             $table->string("no_telp");

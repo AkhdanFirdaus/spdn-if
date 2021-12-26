@@ -43,26 +43,26 @@
     </div>
     <div id="jumbotron" class="card-content-center md:h-1/2 p-10 md:p-20 bg-violet-500 bg-opacity-30">
         <div class="grid grid-rows-3 md:grid-rows-1 grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="card-primary card-content-center group flex flex-col space-y-5">
+            <a href="mata-kuliah" class="card-primary card-content-center group flex flex-col space-y-5">
                 <span class="fa-stack block">
-                    <i class="fas fa-circle fa-stack-2x group-hover:text-white"></i>
+                    <i class="fas fa-circle fa-stack-2x text-violet-500 group-hover:text-white"></i>
                     <i class="fas fa-book fa-stack-1x fa-inverse group-hover:text-violet-500"></i>
                 </span>
-                <h1 class="font-semibold group-hover:text-white">Lihat Daftar Mata Kuliah</h1>
-            </div>
-            <div class="card-primary card-content-center group flex flex-col space-y-5">
+                <h1 class="font-semibold text-violet-500 group-hover:text-white">Lihat Daftar Mata Kuliah</h1>
+            </a>
+            <a href="/mahasiswa" class="card-primary card-content-center group flex flex-col space-y-5">
                 <span class="fa-stack block">
-                    <i class="fas fa-circle fa-stack-2x group-hover:text-white"></i>
+                    <i class="fas fa-circle fa-stack-2x text-violet-500 group-hover:text-white"></i>
                     <i class="fas fa-user fa-stack-1x fa-inverse group-hover:text-violet-500"></i>
                 </span>
-                <h1 class="font-semibold group-hover:text-white">Lihat Daftar Mahasiswa</h1>
-            </div>
+                <h1 class="font-semibold text-violet-500 group-hover:text-white">Lihat Daftar Mahasiswa</h1>
+            </a>
             <a href="/info" class="card-primary card-content-center group flex flex-col space-y-5">
                 <span class="fa-stack block">
-                    <i class="fas fa-circle fa-stack-2x group-hover:text-white"></i>
+                    <i class="fas fa-circle fa-stack-2x text-violet-500 group-hover:text-white"></i>
                     <i class="fas fa-info fa-stack-1x fa-inverse group-hover:text-violet-500"></i>
                 </span>
-                <h1 class="font-semibold group-hover:text-white">Tentang Aplikasi</h1>
+                <h1 class="font-semibold text-violet-500 group-hover:text-white">Lihat Info</h1>
             </a>
         </div>
     </div>
