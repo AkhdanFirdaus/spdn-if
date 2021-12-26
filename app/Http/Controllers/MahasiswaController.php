@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Mahasiswa;
+use Illuminate\Http\Request;
+
+class MahasiswaController extends Controller
+{
+    public function show(Request $request)
+    {
+        $mahasiswa = Mahasiswa::where('nim', $request->nim)->first();
+
+        if ($mahasiswa) {
+            return response()->json([
+                'message' => 'Mahasiswa ditemukan',
+                'data' => $mahasiswa,
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Mahasiswa tidak ditemukan',
+            ], 200);
+        }
+    }
+}
