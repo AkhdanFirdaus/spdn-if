@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignToNilaiTable extends Migration
+class AddKelasForeignIdToNilaisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddForeignToNilaiTable extends Migration
     public function up()
     {
         Schema::table('nilais', function (Blueprint $table) {
-            $table->foreignId('mata_kuliah_id')->after('id');
-            $table->foreignId('mahasiswa_id')->after('mata_kuliah_id');
+            $table->foreignId('kelas_id')->after('mata_kuliah_id');
         });
     }
 
@@ -27,8 +26,8 @@ class AddForeignToNilaiTable extends Migration
     public function down()
     {
         Schema::table('nilais', function (Blueprint $table) {
-            $table->dropForeign(['mata_kuliah_id', 'mahasiswa_id']);
-            $table->dropColumn(['mata_kuliah_id', 'mahasiswa_id']);
+            $table->dropForeign('kelas_id');
+            $table->dropColumn('kelas_id');
         });
     }
 }

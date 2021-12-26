@@ -3,43 +3,13 @@
 @section('content')
 <div class="flex flex-col md:flex-row h-screen">
     <div class="flex-1 bg-violet-300">
-        <div class="min-h-screen grid place-items-center">
-            <div class="w-full px-8 max-w-md mx-auto">
-                <div class="grid grid-rows-3 grid-cols-1 gap-4">
-                    <div class="card-primary group">
-                        <div class="group-hover:text-white">
-                            <h1 class="leading-6 text-bold">{{ $mahasiswa->nama }}</h1>
-                            <small class="text-sm">{{ $mahasiswa->nim }}</small>
-                            <hr class="my-2">
-                            <p class="leading-6"><i class="mr-3 fas fa-envelope"></i>{{ $mahasiswa->email }}</p>
-                            <p class="leading-6"><i class="mr-3 fas fa-phone"></i>{{ $mahasiswa->no_telp }}</p>
-                            <hr class="my-2">
-                            <p class="text-sm text-justify font-semibold leading-6">{{ $mahasiswa->alamat }}</p>
-                        </div>
-                    </div>
-                    <div class="card-primary card-content-center group">
-                        <div class="text-center group-hover:text-white">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x group-hover:text-white"></i>
-                                <i class="fas fa-info fa-stack-1x fa-inverse group-hover:text-violet-500"></i>
-                            </span>
-                            <h1 class="leading-6 my-2 font-bold">Lihat Nilai</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                    <div class="card-primary card-content-center group">
-                        <div class="text-center group-hover:text-white">
-                            <span class="fa-stack">
-                                <i class="fas fa-circle fa-stack-2x group-hover:text-white"></i>
-                                <i class="fas fa-info fa-stack-1x fa-inverse group-hover:text-violet-500"></i>
-                            </span>
-                            <h1 class="leading-6 my-2 font-bold">Informasi MK</h1>
-                            <div id="detail-mk">Silahkan Pilih Mata Kuliah</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="leading-6 text-bold">{{ $mahasiswa->nama }}</h1>
+        <small class="text-sm">{{ $mahasiswa->nim }}</small>
+        <hr class="my-2">
+        <p class="leading-6"><i class="mr-3 fas fa-envelope"></i>{{ $mahasiswa->email }}</p>
+        <p class="leading-6"><i class="mr-3 fas fa-phone"></i>{{ $mahasiswa->no_telp }}</p>
+        <hr class="my-2">
+        <p class="text-sm text-justify font-semibold leading-6">{{ $mahasiswa->alamat }}</p>
     </div>
     <div class="flex-1">
         <div class="min-h-screen grid place-items-center">

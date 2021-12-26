@@ -23,5 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('mata-kuliah', [MataKuliahController::class, 'index']);
 Route::get('mata-kuliah/{id}', [MataKuliahController::class, 'show']);
+
+Route::get('mahasiswa/', [MahasiswaController::class, 'index']);
 Route::get('mahasiswa/{nim}', [MahasiswaController::class, 'show']);
+
 Route::post('nilai', [NilaiController::class, 'store']);
