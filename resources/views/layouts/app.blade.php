@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistem Pengolaan Data Mahasiswa IF</title>
     <link rel="stylesheet" href="/css/app.css">
-    @yield('styles')
+    @stack('styles')
 </head>
 
 <body>
     @yield('content')
     <script src="/js/app.js"></script>
-    @yield('scripts')
+    @stack('scripts')
 </body>
 
 </html>

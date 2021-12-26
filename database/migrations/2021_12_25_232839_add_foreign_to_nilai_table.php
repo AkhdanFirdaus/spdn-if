@@ -14,8 +14,8 @@ class AddForeignToNilaiTable extends Migration
     public function up()
     {
         Schema::table('nilais', function (Blueprint $table) {
-            $table->foreignId('mata_kuliah_id');
-            $table->foreignId('mahasiswa_id');
+            $table->foreignId('mata_kuliah_id')->after('id');
+            $table->foreignId('mahasiswa_id')->after('mata_kuliah_id');
         });
     }
 

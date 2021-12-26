@@ -14,72 +14,19 @@ class MataKuliahController extends Controller
      */
     public function index()
     {
-        //
+        $mataKuliahs = MataKuliah::all();
+        return response()->json([
+            'message' => 'Sukses mendapatkan data mata kuliah',
+            'data' => $mataKuliahs,
+        ], 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function show(Request $request)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MataKuliah  $mataKuliah
-     * @return \Illuminate\Http\Response
-     */
-    public function show(MataKuliah $mataKuliah)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MataKuliah  $mataKuliah
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(MataKuliah $mataKuliah)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MataKuliah  $mataKuliah
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, MataKuliah $mataKuliah)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MataKuliah  $mataKuliah
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(MataKuliah $mataKuliah)
-    {
-        //
+        $mataKuliah = MataKuliah::find($request->id);
+        return response()->json([
+            'message' => 'Sukses mendapatkan data mata kuliah',
+            'data' => $mataKuliah,
+        ], 200);
     }
 }

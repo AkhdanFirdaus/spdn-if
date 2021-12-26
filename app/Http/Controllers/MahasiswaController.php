@@ -22,4 +22,10 @@ class MahasiswaController extends Controller
             ], 200);
         }
     }
+
+    public function detail(Request $request)
+    {
+        $mahasiswa = Mahasiswa::where('nim', $request->nim)->first();
+        return view('mahasiswa', ['mahasiswa' => $mahasiswa]);
+    }
 }

@@ -3,4 +3,13 @@
 @tailwind utilities;
 
 @layer components {
+    .label-primary {
+        @apply block ml-4 text-slate-900 text-sm font-medium leading-6;
+    }
+    .input-primary {
+        @apply mt-1 w-full bg-slate-100 rounded-full border-gray-100 focus:border-violet-500 text-sm leading-6 text-slate-700;
+    }
+    .button-primary {
+        @apply px-4 py-2 bg-violet-500 rounded-full focus:shadow hover:bg-violet-600 text-sm leading-6 text-white;
+    }
 }

@@ -57,12 +57,12 @@ class MataKuliahSeeder extends Seeder
             ],
             [
                 "nama" => 'Intelegensia Buatan',
-                "sks" => '2',
+                "sks" => '3',
                 "semester" => '5',
             ],
             [
                 "nama" => 'Manajemen Proyek Perangkat Lunak',
-                "sks" => '1',
+                "sks" => '3',
                 "semester" => '5',
             ],
         ];
