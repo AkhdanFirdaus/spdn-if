@@ -116,11 +116,11 @@
 
         axios.post('/api/nilai', formData).then((result) => {
             console.log(result.data.message)
-            closemodalTambahNilai()
+            closeModalTambahNilai()
             openModalSuccess(result.data.message)
         }).catch((err) => {
             console.log(err)
-            closemodalTambahNilai()
+            closeModalTambahNilai()
             openModalFailed('Gagal ' + err)
         })
     })
