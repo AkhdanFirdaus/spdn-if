@@ -27,4 +27,6 @@ Route::get('mata-kuliah/{id}', [MataKuliahController::class, 'show']);
 Route::get('mahasiswa/', [MahasiswaController::class, 'index']);
 Route::get('mahasiswa/{nim}', [MahasiswaController::class, 'show']);
 
+Route::get('nilai', [NilaiController::class, 'index']);
 Route::post('nilai', [NilaiController::class, 'store']);
+Route::get('nilai/{nim}', [NilaiController::class, 'show']);

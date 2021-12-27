@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'welcome']);
 Route::get('/mata-kuliah', [PageController::class, 'mataKuliah']);
-Route::get('/info', [PageController::class, 'kelas']);
+Route::get('/info', [PageController::class, 'info']);
 
 Route::get('/mahasiswa', [PageController::class, 'mahasiswa']);
 Route::get('/mahasiswa/{nim}', [MahasiswaController::class, 'detail']);

@@ -10,16 +10,26 @@
         <p class="leading-8 my-5">Lihat Daftar Mahasiswa</p>
     </div>
     <div class="p-10 md:p-20 bg-violet-500 bg-opacity-30">
-        <table class="table-fixed w-full">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>NIM</th>
-                    <th>Nama</th>
-                </tr>
-            </thead>
-            <tbody id="table-mahasiswa"></tbody>
-        </table>
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="table-auto min-w-full divide-y divide-gray-200" id="table-test">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">NIM
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kelas
+                        </th>
+                        <th scope="col" class="relative px-6 py-3">
+                            <span class="sr-only">Edit</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200" id="table-mahasiswa"></tbody>
+            </table>
+        </div>
     </div>
 </div>
 @endsection
@@ -28,9 +38,13 @@
 <script>
     const card = (index, data) => {
         return `<tr>
-            <td>${index}</td>
-            <td>${data.nim}</td>
-            <td>${data.nama}</td>
+            <td class="px-6 py-4 whitespace-nowrap">${index}</td>
+            <td class="px-6 py-4 whitespace-nowrap">${data.nim}</td>
+            <td class="px-6 py-4 whitespace-nowrap">${data.nama}</td>
+            <td class="px-6 py-4 whitespace-nowrap">${data.kelas}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                <a href="/mahasiswa/${data.nim}" class="text-indigo-600 hover:text-indigo-900">Detail</a>
+            </td>
         </tr>`
     }
 
